@@ -7,6 +7,7 @@
     --slate: #434455;
     --cloud: #F4F4FD;
     --ocean: #404bbf;
+    --green: #31D0AA;
     --cornflower: #e7e9fc;
     --row-indent: 48px;
     --col-indent: 24px;
@@ -76,8 +77,8 @@ img {
     width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
-    outline: 2px solid red;
-    outline-offset: -2px;
+    /* outline: 2px solid red;
+    outline-offset: -2px; */
 }
 
 .hero,
@@ -144,6 +145,31 @@ footer {
 }
 /* #endregion */
 
+/* #region Social */
+.social-links-list {
+    display: flex;
+    gap: 24px;
+}
+.social-item-link {
+    width: 16px;
+    height: 16px;
+    fill: var(--white);
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--iris);
+}
+.social-item:hover,
+.social-item:focus {
+    background-color: var(--green);
+}
+/* #endregion */
+
 /* #region Navigation */
 .header {
     border-bottom: 1px solid var(--cornflower);
@@ -164,6 +190,7 @@ footer {
     flex-grow: 1;
 }
 .nav-list {
+    
     display: flex;
     align-items: center;
     gap: 40px;
@@ -171,7 +198,7 @@ footer {
 .nav-item {
     font-weight: 500;
     line-height: 150%;
-    
+    position: relative;
 }
 
 .nav-link {
@@ -187,6 +214,20 @@ footer {
     color: var(--ocean);
 }
 
+.nav-link.active {
+    color: var(--ocean);
+}
+.nav-link.active::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--ocean);
+}
 .address {
     color: 	var(--slate);
 }
@@ -204,6 +245,9 @@ footer {
     color: var(--ocean);
 }
 /* #endregion */
+
+
+
 
 /* #region Hero */
 .hero {
@@ -286,6 +330,12 @@ footer {
 .team-text {
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 8px;
+}
+.team-member-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* #endregion *
 
@@ -328,6 +378,26 @@ footer {
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+.footer .container {
+    display: flex;
+}
+.footer-social {
+    margin-left: 120px;
+}
+.footer-social .social-links-list {
+    gap: 16px;
+}
+.footer-social .social-item-link {
+    width: 24px;
+    height: 24px;
+}
+.footer-social .social-item {
+    padding: 8px;
+}
+
+.footer-social-title {
+    margin-bottom: 16px;
 }
 .footer-logo {
     color: var(--cloud);
