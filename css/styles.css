@@ -251,6 +251,8 @@ footer {
 }
 .address-link {
     line-height: 1.5;
+    transition: var(--anim-fast);
+    transition-property: color;
 }
 .address-link:hover,
 .address-link:focus {
