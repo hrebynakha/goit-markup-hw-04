@@ -317,6 +317,25 @@ footer {
 }
 .features-item {
 }
+
+.features-item-icon-wrapper {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid var(--iris);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: var(--cloud);
+    margin-bottom: 8px;
+}
+
+.feature-item-icon {
+    height: 64px;
+    width: 64px;
+    fill: var(--navy-blue);
+}
 /* #endregion *
 
 /* #region Team */
